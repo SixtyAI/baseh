@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name          = "baseh"
   spec.version       = Baseh::VERSION
   spec.authors       = ["cloudyindustries"]
-  spec.email         = ["mat@cloudyventures.com"]
+  spec.email         = ["mat@cloudy.industries"]
   spec.homepage      = "https://github.com/cloudyindustries/baseh"
   spec.summary       = "baseH (Human Reference Code) codec, Ruby port of the frozen spec"
   spec.description   = "Encodes and decodes human reference codes per the baseH codec " \
