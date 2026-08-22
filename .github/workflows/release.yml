@@ -82,7 +82,7 @@ jobs:
         run: cd go && go test -fuzz=FuzzDecode -fuzztime=5m .
 
   # Publishing uses OIDC trusted publishing; no long-lived registry tokens.
-  # Each registry must have cloudyventures/baseh + this workflow registered as
+  # Each registry must have cloudyindustries/baseh + this workflow registered as
   # a trusted publisher first (see docs/releasing.md).
   publish-npm:
     needs: verify
@@ -106,7 +106,7 @@ jobs:
           npm ci && npm run build
           if npm publish --access public --provenance; then
             echo "published ${{ github.ref_name }}"
-          elif curl -sf "https://registry.npmjs.org/@cloudyventures%2fbaseh/$(node -p "require('./package.json').version")" >/dev/null; then
+          elif curl -sf "https://registry.npmjs.org/@cloudyindustries%2fbaseh/$(node -p "require('./package.json').version")" >/dev/null; then
             echo "version already on npm (bootstrap publish), continuing"
           else
             exit 1

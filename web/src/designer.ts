@@ -1,6 +1,6 @@
 import { candidateProfile, design, deriveAlphabet, deriveChecksumAlphabet, escapeHtml, expandableDesign, expandableProfile, exportDesign, friendlyError, generationTable, lookupCode, parseIdentifier, parseRequired, powBigInt, sampleCodes, spokenDropsExplainer, trySuggestions, visualDropsExplainer } from "./core.js";
 import { renderCodeLookup, renderTryList } from "./try-list.js";
-import { Baseh, type BasehProfile } from "@cloudyventures/baseh";
+import { Baseh, type BasehProfile } from "@cloudyindustries/baseh";
 import type { DesignerInput, ProfanityMode, SafetyLevel, Candidate } from "./core.js";
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;

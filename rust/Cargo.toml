@@ -1,12 +1,12 @@
 [package]
 name = "baseh"
-version = "2.0.3"
+version = "2.0.4"
 edition = "2021"
 rust-version = "1.87"
 license = "Apache-2.0"
 description = "baseH codec: fixed-length, checksummed, optionally permuted human-readable identifiers"
-repository = "https://github.com/cloudyventures/baseh"
-homepage = "https://github.com/cloudyventures/baseh"
+repository = "https://github.com/cloudyindustries/baseh"
+homepage = "https://github.com/cloudyindustries/baseh"
 documentation = "https://docs.rs/baseh"
 readme = "README.md"
 keywords = ["baseh", "encoding", "identifier", "checksum", "human-readable"]

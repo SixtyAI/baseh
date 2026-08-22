@@ -1,10 +1,10 @@
 {
-  "name": "@cloudyventures/baseh",
-  "version": "2.0.3",
+  "name": "@cloudyindustries/baseh",
+  "version": "2.0.4",
   "description": "baseH: reversible, checksummed, human-safe short references for integers.",
-  "repository": "github:cloudyventures/baseh",
-  "homepage": "https://github.com/cloudyventures/baseh#readme",
-  "bugs": "https://github.com/cloudyventures/baseh/issues",
+  "repository": "github:cloudyindustries/baseh",
+  "homepage": "https://github.com/cloudyindustries/baseh#readme",
+  "bugs": "https://github.com/cloudyindustries/baseh/issues",
   "keywords": [
     "baseh",
     "encoding",

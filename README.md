@@ -1,9 +1,9 @@
 # baseH
 
 **Try it now (client-side only, nothing is sent anywhere):**
-[Capacity Calculator](https://cloudyventures.github.io/baseh/) (parameters in,
+[Capacity Calculator](https://cloudyindustries.github.io/baseh/) (parameters in,
 exact capacity and operational lifetime out) and
-[Code Designer](https://cloudyventures.github.io/baseh/designer.html)
+[Code Designer](https://cloudyindustries.github.io/baseh/designer.html)
 (required capacity in, shortest valid configuration out).
 
 baseH converts a long number into a short string of characters that a person
@@ -51,16 +51,16 @@ This implementation gives you total control over length, capacity, checksums and
 
 | Language | Command | Examples |
 |---|---|---|
-| JavaScript / TypeScript | `npm install @cloudyventures/baseh` | [js/examples/examples.ts](js/examples/examples.ts) |
+| JavaScript / TypeScript | `npm install @cloudyindustries/baseh` | [js/examples/examples.ts](js/examples/examples.ts) |
 | Python | `pip install baseh` | [python/examples/examples.py](python/examples/examples.py) |
-| Go | `go get github.com/cloudyventures/baseh/go/v2` | [go/examples/main.go](go/examples/main.go) |
+| Go | `go get github.com/cloudyindustries/baseh/go/v2` | [go/examples/main.go](go/examples/main.go) |
 | Rust | `cargo add baseh` | [rust/examples/examples.rs](rust/examples/examples.rs) |
 | Ruby | `gem install baseh` | [ruby/examples/examples.rb](ruby/examples/examples.rb) |
 
 ## Quick start
 
 ```typescript
-import { Baseh, basehExpandableV1 } from "@cloudyventures/baseh";
+import { Baseh, basehExpandableV1 } from "@cloudyindustries/baseh";
 
 const h = new Baseh(basehExpandableV1());
 
@@ -196,9 +196,9 @@ Plan so it does not, and design so it does not matter if it does.
 ```text
 spec/       normative design documents
 vectors/    frozen cross-language conformance vectors
-js/         TypeScript reference implementation (npm: @cloudyventures/baseh)
+js/         TypeScript reference implementation (npm: @cloudyindustries/baseh)
 python/     Python implementation (PyPI: baseh)
-go/         Go implementation (module github.com/cloudyventures/baseh/go/v2)
+go/         Go implementation (module github.com/cloudyindustries/baseh/go/v2)
 rust/       Rust implementation (crates.io: baseh)
 ruby/       Ruby implementation (RubyGems: baseh)
 web/        calculator and designer source

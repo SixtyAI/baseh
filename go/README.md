@@ -7,7 +7,7 @@ cross-language vectors in `vectors/`.
 ## Install
 
 ```sh
-go get github.com/cloudyventures/baseh/go/v2
+go get github.com/cloudyindustries/baseh/go/v2
 ```
 
 ## Expandable mode
@@ -92,7 +92,7 @@ import (
 	"fmt"
 	"math/big"
 
-	baseh "github.com/cloudyventures/baseh/go/v2"
+	baseh "github.com/cloudyindustries/baseh/go/v2"
 )
 
 func main() {
@@ -124,7 +124,7 @@ import (
 	"fmt"
 	"math/big"
 
-	baseh "github.com/cloudyventures/baseh/go/v2"
+	baseh "github.com/cloudyindustries/baseh/go/v2"
 )
 
 func main() {

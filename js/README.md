@@ -1,16 +1,16 @@
-# @cloudyventures/baseh
+# @cloudyindustries/baseh
 
 TypeScript implementation of the baseH (Human Reference Code) codec. Encodes
 integer IDs as checksummed, human-friendly reference codes — short codes that
 grow automatically in expandable mode (recommended), or fixed-length codes on
 the classic tiers — with a feistel-v1 permutation on every tier and profanity
 safety. The normative spec is `spec/IMPLEMENTATION_CODEC.md` in the
-[monorepo](https://github.com/cloudyventures/baseh).
+[monorepo](https://github.com/cloudyindustries/baseh).
 
 ## Install
 
 ```sh
-npm install @cloudyventures/baseh
+npm install @cloudyindustries/baseh
 ```
 
 One runtime dependency (`@noble/hashes`, auditable and dependency-free itself). Requires Node 18 or later (native `BigInt`).
@@ -27,7 +27,7 @@ forever; the code's length selects the generation on decode.
 The recommended starting tier is `baseh-expandable-v1`:
 
 ```typescript
-import { Baseh, basehExpandableV1 } from "@cloudyventures/baseh";
+import { Baseh, basehExpandableV1 } from "@cloudyindustries/baseh";
 
 const codec = new Baseh(basehExpandableV1());
 
@@ -72,7 +72,7 @@ A keyed private-mapping variant `baseh-expandable-p-v1` mirrors the `-p`
 fixed tiers:
 
 ```typescript
-import { basehExpandablePV1 } from "@cloudyventures/baseh";
+import { basehExpandablePV1 } from "@cloudyindustries/baseh";
 
 const codec = new Baseh(
   basehExpandablePV1({ keyBytes, keyId: "prod-01" })
@@ -108,7 +108,7 @@ hides sequence, not records. See the spec, section 7.5.
 ## Usage
 
 ```typescript
-import { Baseh, basehExpandableV1 } from "@cloudyventures/baseh";
+import { Baseh, basehExpandableV1 } from "@cloudyindustries/baseh";
 
 const codec = new Baseh(basehExpandableV1());
 
@@ -132,7 +132,7 @@ codec.decode("TB14QDFU", { tryCorrection: true, confusionProfile: "light" });
 Fixed mode works the same way, through a fixed tier helper:
 
 ```typescript
-import { basehMediumV1 } from "@cloudyventures/baseh";
+import { basehMediumV1 } from "@cloudyindustries/baseh";
 
 const fixed = new Baseh(basehMediumV1());
 const code = fixed.encode(123456n);        // fixed-width hyphenated code
@@ -147,7 +147,7 @@ The `P` variants take a caller-supplied key instead; keep that key in a
 secret manager and never change it for a live profile:
 
 ```typescript
-import { basehMediumPV1 } from "@cloudyventures/baseh";
+import { basehMediumPV1 } from "@cloudyindustries/baseh";
 
 const codec = new Baseh(
   basehMediumPV1({ keyBytes, keyId: "prod-01" })

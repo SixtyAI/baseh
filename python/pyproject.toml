@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "baseh"
-version = "2.0.3"
+version = "2.0.4"
 description = "baseH codec: checksumed, optionally permuted human-readable identifiers"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -22,9 +22,9 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/cloudyventures/baseh"
-Repository = "https://github.com/cloudyventures/baseh"
-Issues = "https://github.com/cloudyventures/baseh/issues"
+Homepage = "https://github.com/cloudyindustries/baseh"
+Repository = "https://github.com/cloudyindustries/baseh"
+Issues = "https://github.com/cloudyindustries/baseh/issues"
 
 [tool.setuptools]
 package-dir = { "" = "src" }

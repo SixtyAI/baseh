@@ -1,6 +1,6 @@
 import { calculate, calculatorProfile, deriveAlphabet, deriveChecksumAlphabet, deriveExpandableChecksumAlphabet, escapeHtml, friendlyError, lookupCode, parseIdentifier, spokenDropsExplainer, trySuggestions, visualDropsExplainer, type CalculatorInput, type AlphabetMode, type CodecMode, type ProfanityMode, type SafetyLevel } from "./core.js";
 import { renderCodeLookup, renderTryList } from "./try-list.js";
-import { Baseh, type BasehProfile } from "@cloudyventures/baseh";
+import { Baseh, type BasehProfile } from "@cloudyindustries/baseh";
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 

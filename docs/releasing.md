@@ -27,23 +27,23 @@ registration below.
 ## One-time setup per registry
 
 Register the trusted publisher once in each dashboard. In every case the
-repository is `cloudyventures/baseh` and the workflow is `release.yml`
+repository is `cloudyindustries/baseh` and the workflow is `release.yml`
 (environment is left blank; publishing is keyed to tag pushes).
 
 - **PyPI**: pypi.org, Manage account, Publishing, add a pending publisher
   for package name `baseh`. The pending form works before the package
   exists; the first release creates it.
-- **npm**: npmjs.com, package `@cloudyventures/baseh` settings, Trusted Publisher,
-  connect GitHub repo `cloudyventures/baseh` with workflow `release.yml`.
+- **npm**: npmjs.com, package `@cloudyindustries/baseh` settings, Trusted Publisher,
+  connect GitHub repo `cloudyindustries/baseh` with workflow `release.yml`.
   For the very first publish of a new package name, create the package
   placeholder from the npm site first, then connect the publisher.
 - **crates.io**: crates.io, crate `baseh` settings, Trusted Publishing,
-  add GitHub Actions owner `cloudyventures`, repo `baseh`, workflow
+  add GitHub Actions owner `cloudyindustries`, repo `baseh`, workflow
   `release.yml`. The first publish of a brand-new crate name uses the same
   flow once the name is registered in the dashboard.
 - **RubyGems**: rubygems.org, gem `baseh` (create the gem entry or
   claim it on first push per rubygems.org trusted-publishing docs), Trusted
-  Publishers, add repo `cloudyventures/baseh`, workflow `release.yml`.
+  Publishers, add repo `cloudyindustries/baseh`, workflow `release.yml`.
 
 If a registry's first-publish flow still demands a classic token, mint a
 scoped publish token for that registry only, record it in 1Password first,
@@ -54,6 +54,31 @@ The `github-pages` environment needs a deployment policy for tag `v*`, not
 just branches: pages.yml deploys on release tags, and without the tag rule
 the deploy job is rejected before its first step (repo Settings,
 Environments, github-pages, deployment branches and tags).
+
+## The cloudyventures to cloudyindustries rename
+
+The GitHub repo was renamed from `cloudyventures/baseh` to
+`cloudyindustries/baseh` after v2.0.3 shipped. Two consequences.
+
+**Every trusted publisher is stale.** GitHub's OIDC token carries the
+repository's *current* full name, so PyPI, crates.io, RubyGems and npm all
+reject a release from this repo until their registration is edited to
+`cloudyindustries/baseh`. Nothing in this repository can fix that; it is
+four dashboard edits (see the section above). A tag pushed before those
+edits fails all four publish jobs, so the GitHub Release is skipped and the
+release is partial.
+
+**npm is a new package.** The scope moved to `@cloudyindustries/baseh`,
+which does not exist on the registry yet. Before the first tag: create the
+`cloudyindustries` npm org if it is not already there, create the package
+placeholder, then connect the trusted publisher. Afterwards, deprecate the
+old package so existing installs get pointed across:
+`npm deprecate @cloudyventures/baseh "moved to @cloudyindustries/baseh"`.
+
+The Go module path moved to `github.com/cloudyindustries/baseh/go/v2` in
+the same change. The old path keeps resolving through GitHub's rename
+redirect and the module proxy's cache of the `go/v2.0.3` tag, so existing
+consumers are not stranded, but they should move.
 
 ## Rules
 

@@ -2,7 +2,7 @@
   "name": "baseh-web",
   "private": true,
   "license": "Apache-2.0",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
     "test": "tsx --test test/*.test.ts"
   },
   "dependencies": {
-    "@cloudyventures/baseh": "file:../js",
+    "@cloudyindustries/baseh": "file:../js",
     "@noble/hashes": "^1.8.0"
   },
   "devDependencies": {

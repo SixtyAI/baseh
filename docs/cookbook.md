@@ -43,7 +43,7 @@ per keystroke produced 17 false greens. `inspect` gates on the typed length
 first: an incomplete code is never judged, and a complete one always is.
 
 ```typescript
-import { Baseh, basehMediumV1 } from "@cloudyventures/baseh";
+import { Baseh, basehMediumV1 } from "@cloudyindustries/baseh";
 
 const codec = new Baseh(basehMediumV1()); // built once, shared for the page
 
@@ -285,7 +285,7 @@ The pattern: issue under the current key only, decode against a small
 registry of live keys tried in order, retire key ids once traffic drains.
 
 ```typescript
-import { Baseh, BasehError, basehExpandablePV1 } from "@cloudyventures/baseh";
+import { Baseh, BasehError, basehExpandablePV1 } from "@cloudyindustries/baseh";
 
 const KEYS: Record<string, Uint8Array> = {
   "prod-02": currentKeyBytes,   // issuing key

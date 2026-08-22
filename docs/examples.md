@@ -36,13 +36,13 @@ also a runnable file that prints exactly the output shown:
 ## JavaScript / TypeScript
 
 ```bash
-npm install @cloudyventures/baseh
+npm install @cloudyindustries/baseh
 ```
 
 ### Expandable mode
 
 ```typescript
-import { Baseh, basehExpandableV1 } from "@cloudyventures/baseh";
+import { Baseh, basehExpandableV1 } from "@cloudyindustries/baseh";
 
 // Codes start at 4 characters and grow automatically as ids climb past
 // each length's capacity. No `0`/`O` in the body, no left-padding, and no
@@ -66,7 +66,7 @@ invoices.encode(42n);  // starts at 5 characters, no separator until 8+
 ### Zero configuration
 
 ```typescript
-import { encode, decode, validate } from "@cloudyventures/baseh";
+import { encode, decode, validate } from "@cloudyindustries/baseh";
 
 // Backed by the expandable v1 default profile: codes start at 4 characters
 // and grow with the id sequence, so there is no practical capacity limit.
@@ -83,7 +83,7 @@ validate("FGJM-M736");        // { valid: true, canonicalCode: "FGJM-M736" }
 ### Frozen preset
 
 ```typescript
-import { Baseh, BasehError, basehMediumV1 } from "@cloudyventures/baseh";
+import { Baseh, BasehError, basehMediumV1 } from "@cloudyindustries/baseh";
 
 const medium = new Baseh(basehMediumV1());
 
@@ -263,7 +263,7 @@ codec.decode("ZZZZ-ZZZZ")           # raises BasehError [INVALID_CHECKSUM]
 ## Go
 
 ```bash
-go get github.com/cloudyventures/baseh/go/v2
+go get github.com/cloudyindustries/baseh/go/v2
 ```
 
 ### Expandable mode
