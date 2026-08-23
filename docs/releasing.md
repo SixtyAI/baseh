@@ -26,24 +26,36 @@ registration below.
 
 ## One-time setup per registry
 
-Register the trusted publisher once in each dashboard. In every case the
-repository is `cloudyindustries/baseh` and the workflow is `release.yml`
-(environment is left blank; publishing is keyed to tag pushes).
+Register the trusted publisher once in each dashboard. Every form wants the
+same four values, and all four dashboards take owner and repository as
+*separate* fields:
 
-- **PyPI**: pypi.org, Manage account, Publishing, add a pending publisher
-  for package name `baseh`. The pending form works before the package
-  exists; the first release creates it.
-- **npm**: npmjs.com, package `@cloudyindustries/baseh` settings, Trusted Publisher,
-  connect GitHub repo `cloudyindustries/baseh` with workflow `release.yml`.
-  For the very first publish of a new package name, create the package
-  placeholder from the npm site first, then connect the publisher.
-- **crates.io**: crates.io, crate `baseh` settings, Trusted Publishing,
-  add GitHub Actions owner `cloudyindustries`, repo `baseh`, workflow
-  `release.yml`. The first publish of a brand-new crate name uses the same
-  flow once the name is registered in the dashboard.
-- **RubyGems**: rubygems.org, gem `baseh` (create the gem entry or
-  claim it on first push per rubygems.org trusted-publishing docs), Trusted
-  Publishers, add repo `cloudyindustries/baseh`, workflow `release.yml`.
+- Owner: `cloudyindustries`
+- Repository: `baseh`
+- Workflow: `release.yml` (bare filename, never a path)
+- Environment: **blank**
+
+The environment field is the easy one to get wrong. Some dashboards
+encourage setting it, but no publish job in release.yml declares an
+`environment:`, so any value there fails to match the OIDC claim and the
+upload is refused.
+
+- **PyPI**: which page depends on whether the project exists. `baseh` does,
+  so use the project's own settings: pypi.org, Your projects, `baseh`,
+  Manage, Publishing. The account-level *pending publisher* form is only
+  for projects that do not exist yet; a pending entry for a name already on
+  PyPI does not bind, and the release fails with `invalid-publisher`.
+- **npm**: npmjs.com, Packages, `@cloudyindustries/baseh`, Settings,
+  Trusted Publisher. Under "Allowed actions" tick `npm publish` only.
+  `npm stage publish` parks the upload for manual approval, which this
+  workflow reads as a failed publish. npm has no way to create an empty
+  package and no pending-publisher flow, so a brand-new package name has to
+  be bootstrapped with one manual `npm publish --access public` before the
+  publisher can be attached.
+- **crates.io**: crates.io, crate `baseh`, Settings, Trusted Publishing.
+- **RubyGems**: rubygems.org, your profile, gem `baseh`, Trusted publishers
+  in the sidebar. RubyGems does support pending publishers for gems that do
+  not exist yet, on a separate page that also asks for the gem name.
 
 If a registry's first-publish flow still demands a classic token, mint a
 scoped publish token for that registry only, record it in 1Password first,
