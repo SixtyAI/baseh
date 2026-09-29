@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version       = Baseh::VERSION
   spec.authors       = ["cloudyindustries"]
   spec.email         = ["mat@cloudy.industries"]
-  spec.homepage      = "https://github.com/cloudyindustries/baseh"
+  spec.homepage      = "https://github.com/SixtyAI/baseh"
   spec.summary       = "baseH (Human Reference Code) codec, Ruby port of the frozen spec"
   spec.description   = "Encodes and decodes human reference codes per the baseH codec " \
                        "specification: fixed-length base-N bodies, rolling polynomial " \
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   # Zero runtime dependencies. openssl, json and minitest are stdlib.
   spec.metadata = {
     "rubygems_mfa_required" => "true",
-    "source_code_uri" => "https://github.com/cloudyindustries/baseh",
-    "bug_tracker_uri" => "https://github.com/cloudyindustries/baseh/issues"
+    "source_code_uri" => "https://github.com/SixtyAI/baseh",
+    "bug_tracker_uri" => "https://github.com/SixtyAI/baseh/issues"
   }
 end

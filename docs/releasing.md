@@ -30,7 +30,7 @@ Register the trusted publisher once in each dashboard. Every form wants the
 same four values, and all four dashboards take owner and repository as
 *separate* fields:
 
-- Owner: `cloudyindustries`
+- Owner: `SixtyAI`
 - Repository: `baseh`
 - Workflow: `release.yml` (bare filename, never a path)
 - Environment: **blank**

@@ -2,9 +2,9 @@
   "name": "@cloudyindustries/baseh",
   "version": "2.0.4",
   "description": "baseH: reversible, checksummed, human-safe short references for integers.",
-  "repository": "github:cloudyindustries/baseh",
-  "homepage": "https://github.com/cloudyindustries/baseh#readme",
-  "bugs": "https://github.com/cloudyindustries/baseh/issues",
+  "repository": "github:SixtyAI/baseh",
+  "homepage": "https://github.com/SixtyAI/baseh#readme",
+  "bugs": "https://github.com/SixtyAI/baseh/issues",
   "keywords": [
     "baseh",
     "encoding",
