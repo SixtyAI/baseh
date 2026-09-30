@@ -45,7 +45,7 @@ upload is refused.
   Manage, Publishing. The account-level *pending publisher* form is only
   for projects that do not exist yet; a pending entry for a name already on
   PyPI does not bind, and the release fails with `invalid-publisher`.
-- **npm**: npmjs.com, Packages, `@cloudyindustries/baseh`, Settings,
+- **npm**: npmjs.com, Packages, `@sixtyai/baseh`, Settings,
   Trusted Publisher. Under "Allowed actions" tick `npm publish` only.
   `npm stage publish` parks the upload for manual approval, which this
   workflow reads as a failed publish. npm has no way to create an empty
@@ -97,9 +97,12 @@ consumers are not stranded, but they should move.
 The repo moved org again (2026-09-29) and the same two consequences applied.
 All four trusted publishers were re-registered for `SixtyAI/baseh` +
 `release.yml` on 2026-09-29 (PyPI was still on `cloudyventures/baseh`, so
-PyPI publishes had likely been failing since the first rename). The npm
-scope stays `@cloudyindustries/baseh` this time, so no new package and no
-deprecation dance. The Go module path is now
+the v2.0.4 PyPI publish failed and PyPI sat at 2.0.3 until a re-run or the
+next tag). The npm scope moves to `@sixtyai/baseh` (2026-09-30): npm has
+no rename, so the new package is bootstrapped with one manual
+`npm publish --access public`, its trusted publisher attached as above and
+the old `@cloudyindustries/baseh` deprecated with a pointer but left live
+for existing installs. The Go module path is now
 `github.com/SixtyAI/baseh/go/v2` from the next tag onward; both older paths
 keep resolving through GitHub's move redirects and the module proxy cache.
 

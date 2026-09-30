@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "noEmit": true,
     "paths": {
-      "@cloudyindustries/baseh": ["../js/src/index.ts"]
+      "@sixtyai/baseh": ["../js/src/index.ts"]
     }
   },
   "include": ["src", "test"]

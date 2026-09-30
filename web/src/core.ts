@@ -2,7 +2,7 @@
  * Shared math for the calculator and designer. No DOM access.
  * Capacity math is exact bigint; ratios are display-only Numbers.
  */
-import { Baseh, BasehError, FROZEN_KEY_BYTES, type BasehProfile } from "@cloudyindustries/baseh";
+import { Baseh, BasehError, FROZEN_KEY_BYTES, type BasehProfile } from "@sixtyai/baseh";
 
 export type AlphabetMode = "digits" | "upper" | "alnum" | "custom";
 export type CodecMode = "fixed" | "expandable";

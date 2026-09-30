@@ -10,7 +10,7 @@
     "test": "tsx --test test/*.test.ts"
   },
   "dependencies": {
-    "@cloudyindustries/baseh": "file:../js",
+    "@sixtyai/baseh": "file:../js",
     "@noble/hashes": "^1.8.0"
   },
   "devDependencies": {

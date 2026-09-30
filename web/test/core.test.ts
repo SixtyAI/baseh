@@ -354,7 +354,7 @@ describe("safety explainer lines", async () => {
 
 describe("trySuggestions", async () => {
   const { calculatorProfile, trySuggestions } = await import("../src/core.js");
-  const { Baseh } = await import("@cloudyindustries/baseh");
+  const { Baseh } = await import("@sixtyai/baseh");
 
   function mediumProfile() {
     return calculatorProfile(calcInput({ visualSafety: "medium", spokenSafety: "medium", checksumLength: 2 }))!;
@@ -430,7 +430,7 @@ describe("trySuggestions", async () => {
 
 describe("lookupCode (spec 12.5 inspect behind the Code converter)", async () => {
   const { calculatorProfile, lookupCode, trySuggestions } = await import("../src/core.js");
-  const { Baseh } = await import("@cloudyindustries/baseh");
+  const { Baseh } = await import("@sixtyai/baseh");
 
   const profile = calculatorProfile(calcInput({ visualSafety: "medium", spokenSafety: "medium", checksumLength: 2 }))!;
   const h = new Baseh(profile);
@@ -635,7 +635,7 @@ describe("expandable separator shape (spec 19.5)", async () => {
     }
   });
   it("rendered codes carry the balanced shapes", async () => {
-    const { Baseh, basehExpandableV1, generationBase } = await import("@cloudyindustries/baseh");
+    const { Baseh, basehExpandableV1, generationBase } = await import("@sixtyai/baseh");
     const h = new Baseh(basehExpandableV1());
     // Bare 4 and 5 below the tier's separatorMinLength of 6; from 6 up the
     // balanced split shows: 6 XXX-XXX, 7 XXXX-XXX, 9 XXXXX-XXXX, 10 XXXXX-XXXXX.
@@ -665,7 +665,7 @@ describe("expandable separator shape (spec 19.5)", async () => {
     }
   });
   it("a non-empty grouping makes an expandable profile invalid", async () => {
-    const { Baseh, BasehError, basehExpandableV1 } = await import("@cloudyindustries/baseh");
+    const { Baseh, BasehError, basehExpandableV1 } = await import("@sixtyai/baseh");
     assert.throws(
       () => new Baseh({ ...basehExpandableV1(), grouping: [4, 4] }),
       (e: unknown) => e instanceof BasehError && e.code === "INVALID_PROFILE"
@@ -675,7 +675,7 @@ describe("expandable separator shape (spec 19.5)", async () => {
 
 describe("expandable calculator mode", async () => {
   const { calculate, calculatorProfile } = await import("../src/core.js");
-  const { Baseh } = await import("@cloudyindustries/baseh");
+  const { Baseh } = await import("@sixtyai/baseh");
 
   const exp = (overrides: Partial<CalculatorInput> = {}) => calcInput({
     codecMode: "expandable", visualSafety: "none", checksumLength: 2,
@@ -818,7 +818,7 @@ describe("expandable designer outcome", async () => {
 
 describe("short checksum (spec 22)", async () => {
   const { calculatorProfile, effectiveChecksumLengthAt, expandableDesign, expandableProfile, generationTable } = await import("../src/core.js");
-  const { Baseh, BasehError, basehExpandableV1, basehExpandablePV1, generationBase } = await import("@cloudyindustries/baseh");
+  const { Baseh, BasehError, basehExpandableV1, basehExpandablePV1, generationBase } = await import("@sixtyai/baseh");
 
   const raw = (code: string) => code.replaceAll("-", "");
 
@@ -965,7 +965,7 @@ describe("short checksum (spec 22)", async () => {
 
 describe("short checksum: zero-checksum window (spec 22 amendment)", async () => {
   const { effectiveChecksumLengthAt, generationCapacityAt, generationTable } = await import("../src/core.js");
-  const { Baseh, BasehError, basehExpandableV1, calculateChecksum, generationBase, generationCapacity } = await import("@cloudyindustries/baseh");
+  const { Baseh, BasehError, basehExpandableV1, calculateChecksum, generationBase, generationCapacity } = await import("@sixtyai/baseh");
 
   const raw = (code: string) => code.replaceAll("-", "");
   const zeroProfile = {
@@ -1053,7 +1053,7 @@ describe("short checksum: zero-checksum window (spec 22 amendment)", async () =>
 });
 
 describe("short checksum: until-8 window boundary (spec 22 amendment)", async () => {
-  const { Baseh, basehExpandableV1, calculateChecksum, generationBase } = await import("@cloudyindustries/baseh");
+  const { Baseh, basehExpandableV1, calculateChecksum, generationBase } = await import("@sixtyai/baseh");
 
   const raw = (code: string) => code.replaceAll("-", "");
   const h = new Baseh({
@@ -1084,7 +1084,7 @@ describe("short checksum: until-8 window boundary (spec 22 amendment)", async ()
 
 describe("repetition filter (spec 21)", async () => {
   const { calculate, calculatorProfile, candidateProfile, expandableDesign, expandableProfile } = await import("../src/core.js");
-  const { Baseh, BasehError } = await import("@cloudyindustries/baseh");
+  const { Baseh, BasehError } = await import("@sixtyai/baseh");
 
   const maxRun = (code: string): number => {
     let best = 1;

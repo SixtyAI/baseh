@@ -1,5 +1,5 @@
 {
-  "name": "@cloudyindustries/baseh",
+  "name": "@sixtyai/baseh",
   "version": "2.0.4",
   "description": "baseH: reversible, checksummed, human-safe short references for integers.",
   "repository": "github:SixtyAI/baseh",

@@ -51,7 +51,7 @@ This implementation gives you total control over length, capacity, checksums and
 
 | Language | Command | Examples |
 |---|---|---|
-| JavaScript / TypeScript | `npm install @cloudyindustries/baseh` | [js/examples/examples.ts](js/examples/examples.ts) |
+| JavaScript / TypeScript | `npm install @sixtyai/baseh` | [js/examples/examples.ts](js/examples/examples.ts) |
 | Python | `pip install baseh` | [python/examples/examples.py](python/examples/examples.py) |
 | Go | `go get github.com/SixtyAI/baseh/go/v2` | [go/examples/main.go](go/examples/main.go) |
 | Rust | `cargo add baseh` | [rust/examples/examples.rs](rust/examples/examples.rs) |
@@ -60,7 +60,7 @@ This implementation gives you total control over length, capacity, checksums and
 ## Quick start
 
 ```typescript
-import { Baseh, basehExpandableV1 } from "@cloudyindustries/baseh";
+import { Baseh, basehExpandableV1 } from "@sixtyai/baseh";
 
 const h = new Baseh(basehExpandableV1());
 
@@ -196,7 +196,7 @@ Plan so it does not, and design so it does not matter if it does.
 ```text
 spec/       normative design documents
 vectors/    frozen cross-language conformance vectors
-js/         TypeScript reference implementation (npm: @cloudyindustries/baseh)
+js/         TypeScript reference implementation (npm: @sixtyai/baseh)
 python/     Python implementation (PyPI: baseh)
 go/         Go implementation (module github.com/SixtyAI/baseh/go/v2)
 rust/       Rust implementation (crates.io: baseh)

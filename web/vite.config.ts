@@ -5,7 +5,7 @@ export default defineConfig({
   base: "/baseh/",
   resolve: {
     alias: {
-      "@cloudyindustries/baseh": resolve(__dirname, "../js/src/index.ts")
+      "@sixtyai/baseh": resolve(__dirname, "../js/src/index.ts")
     }
   },
   build: {
