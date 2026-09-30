@@ -5,7 +5,7 @@ integer IDs as checksummed, human-friendly reference codes — short codes that
 grow automatically in expandable mode (recommended), or fixed-length codes on
 the classic tiers — with a feistel-v1 permutation on every tier and profanity
 safety. The normative spec is `spec/IMPLEMENTATION_CODEC.md` in the
-[monorepo](https://github.com/cloudyindustries/baseh).
+[monorepo](https://github.com/SixtyAI/baseh).
 
 ## Install
 
