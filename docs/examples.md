@@ -263,7 +263,7 @@ codec.decode("ZZZZ-ZZZZ")           # raises BasehError [INVALID_CHECKSUM]
 ## Go
 
 ```bash
-go get github.com/cloudyindustries/baseh/go/v2
+go get github.com/SixtyAI/baseh/go/v2
 ```
 
 ### Expandable mode

@@ -53,7 +53,7 @@ This implementation gives you total control over length, capacity, checksums and
 |---|---|---|
 | JavaScript / TypeScript | `npm install @cloudyindustries/baseh` | [js/examples/examples.ts](js/examples/examples.ts) |
 | Python | `pip install baseh` | [python/examples/examples.py](python/examples/examples.py) |
-| Go | `go get github.com/cloudyindustries/baseh/go/v2` | [go/examples/main.go](go/examples/main.go) |
+| Go | `go get github.com/SixtyAI/baseh/go/v2` | [go/examples/main.go](go/examples/main.go) |
 | Rust | `cargo add baseh` | [rust/examples/examples.rs](rust/examples/examples.rs) |
 | Ruby | `gem install baseh` | [ruby/examples/examples.rb](ruby/examples/examples.rb) |
 
@@ -198,7 +198,7 @@ spec/       normative design documents
 vectors/    frozen cross-language conformance vectors
 js/         TypeScript reference implementation (npm: @cloudyindustries/baseh)
 python/     Python implementation (PyPI: baseh)
-go/         Go implementation (module github.com/cloudyindustries/baseh/go/v2)
+go/         Go implementation (module github.com/SixtyAI/baseh/go/v2)
 rust/       Rust implementation (crates.io: baseh)
 ruby/       Ruby implementation (RubyGems: baseh)
 web/        calculator and designer source

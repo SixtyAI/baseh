@@ -92,6 +92,17 @@ the same change. The old path keeps resolving through GitHub's rename
 redirect and the module proxy's cache of the `go/v2.0.3` tag, so existing
 consumers are not stranded, but they should move.
 
+## The cloudyindustries to SixtyAI move
+
+The repo moved org again (2026-09-29) and the same two consequences applied.
+All four trusted publishers were re-registered for `SixtyAI/baseh` +
+`release.yml` on 2026-09-29 (PyPI was still on `cloudyventures/baseh`, so
+PyPI publishes had likely been failing since the first rename). The npm
+scope stays `@cloudyindustries/baseh` this time, so no new package and no
+deprecation dance. The Go module path is now
+`github.com/SixtyAI/baseh/go/v2` from the next tag onward; both older paths
+keep resolving through GitHub's move redirects and the module proxy cache.
+
 ## Rules
 
 - Never commit a registry token to this repository.

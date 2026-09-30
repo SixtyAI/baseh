@@ -9,7 +9,7 @@ import (
 	"math/big"
 	"strings"
 
-	baseh "github.com/cloudyindustries/baseh/go/v2"
+	baseh "github.com/SixtyAI/baseh/go/v2"
 )
 
 func describeErr(err error) string {
